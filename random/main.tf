@@ -10,9 +10,8 @@ terraform {
 resource "random_pet" "randome_one" {
   keepers = {
     uuid = "${uuid()}" # Force a new name each time
-    not_an_attribute = "try to force plan failure"
   }
-  length = 4
+  length = "fail plan plz"
 }
 
 resource "random_pet" "randome_two" {
