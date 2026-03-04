@@ -9,8 +9,22 @@ deployment_group "yolo" {
   auto_approve_checks = [deployment_auto_approve.yolo]
 }
 
+deployment "dev" {
+  deployment_group = deployment_group.yolo
+}
+
 deployment "staging" {
   deployment_group = deployment_group.yolo
 }
+
+deployment "qa" {
+  deployment_group = deployment_group.yolo
+}
+
+deployment "uat" {
+  deployment_group = deployment_group.yolo
+}
+
+deployment "preprod" {}
 
 deployment "prod" {}
